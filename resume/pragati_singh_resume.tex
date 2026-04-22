@@ -1,0 +1,171 @@
+%-------------------------
+% Resume in Latex
+% Based on: https://github.com/jakegut/resume
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[4]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Pragati Singh} \\ \vspace{2pt}
+    \small \textbf{Full Stack Developer} \\ \vspace{1pt}
+    \small +91 8871962040 $|$
+    \href{mailto:pragatisingh1558@gmail.com}{\underline{pragatisingh1558@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/pragati-singh-0994a13a1}{\underline{linkedin.com/in/pragati-singh}} $|$
+    \href{https://github.com/pragatisingh1556}{\underline{github.com/pragatisingh1556}} $|$
+    Bangalore, India
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+  \small{Computer Science graduate with strong knowledge of Python, Node.js, MySQL, HTML5, CSS3, JavaScript, and React.js. Experienced in developing responsive web applications, REST APIs, and database management with a basic understanding of Data Structures and Algorithms. Eager to apply full-stack development skills in an entry-level developer role to build scalable, efficient, and user-friendly applications.}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{Full Stack Developer Trainee} & \textbf{Pentagon Space} \\
+    \end{tabular*}\vspace{2pt}
+    \small{Worked on building full-stack web applications using React.js, Node.js, and MySQL. Developed responsive front-end interfaces, integrated REST APIs, performed CRUD operations on databases, and used Git for version control.}
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {AI-Powered Fake News \& Scam Detector}{\href{https://github.com/pragatisingh1556/truthscan-ai}{\underline{GitHub}}}
+          {Python, FastAPI, Groq AI (Llama 3.3 70B), MySQL, HTML/CSS/JS, Twilio}{2025}
+          \resumeItemListStart
+            \resumeItem{Engineered a real-time AI system that analyzes news articles, WhatsApp forwards, emails, and URLs for misinformation and scam patterns with confidence scoring (0--100\%)}
+            \resumeItem{Integrated Groq LLM API for intelligent content classification across multiple scan types -- news verification, scam detection, and URL safety analysis}
+            \resumeItem{Built a WhatsApp bot using Twilio webhooks enabling users to verify suspicious messages directly from their phone}
+            \resumeItem{Designed a dashboard with scan history, statistics, and risk indicators backed by MySQL and SQLAlchemy ORM}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {AI-Powered Resume Screening System}{\href{https://github.com/pragatisingh1556/fitscore-ai}{\underline{GitHub}}}
+          {Python, Streamlit, LangChain, Groq AI, PyPDF2, Prompt Engineering}{2025}
+          \resumeItemListStart
+            \resumeItem{Developed an AI tool that parses PDF resumes and matches them against job descriptions, generating a fit score (0--100\%) with detailed skill-gap analysis}
+            \resumeItem{Leveraged LangChain and Groq LLM to identify matching skills, missing competencies, key strengths, and actionable improvement suggestions}
+            \resumeItem{Built an intuitive Streamlit interface allowing recruiters to upload resumes, paste JDs, and export analysis reports instantly}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {Full-Stack Bug Tracking System}{\href{https://github.com/pragatisingh1556/bugtracker}{\underline{GitHub}}}
+          {React.js, Node.js, Express.js, MySQL, JWT, Chart.js, bcrypt}{2025}
+          \resumeItemListStart
+            \resumeItem{Built a full-stack bug management platform with role-based access control (Admin, Developer, Tester) and complete bug lifecycle tracking from reporting to resolution}
+            \resumeItem{Implemented JWT authentication with bcrypt password hashing, and built an analytics dashboard with interactive pie and bar charts using Chart.js}
+            \resumeItem{Developed a comment system for team collaboration and admin panel for user management with severity/priority filtering}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{B.Tech in Computer Science} -- ISBM University, Chhattisgarh \hfill 68\% \\
+     \textbf{Intermediate -- 12th} -- Nirala Junior College, Nagpur \hfill 83\% \\
+     \textbf{Secondary -- 10th} -- Kendriya Vidyalaya No.2, Akhnoor \hfill 72\%
+    }}
+ \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript, HTML/CSS, SQL} \\
+     \textbf{Frontend}{: React.js, Streamlit, Bootstrap, Tailwind CSS} \\
+     \textbf{Backend}{: Node.js, Express.js, FastAPI, REST APIs} \\
+     \textbf{Databases}{: MySQL, Firebase} \\
+     \textbf{Tools}{: Git, GitHub, VS Code, Postman}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

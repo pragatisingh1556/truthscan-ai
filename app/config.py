@@ -19,6 +19,8 @@ DB_PORT = int(os.getenv("DB_PORT", "3306"))
 DB_USER = os.getenv("DB_USER", "root")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "")
 DB_NAME = os.getenv("DB_NAME", "truthscan_ai")
+# enable SSL for cloud databases like TiDB, Aiven, PlanetScale etc
+DB_SSL = os.getenv("DB_SSL", "false").lower() == "true"
 
 # had to use quote_plus because my password has special characters like @ and it was breaking the url
 DATABASE_URL = f"mysql+pymysql://{quote_plus(DB_USER)}:{quote_plus(DB_PASSWORD)}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
